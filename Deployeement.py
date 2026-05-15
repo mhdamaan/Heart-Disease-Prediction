@@ -19,7 +19,7 @@ chest_pain_map = {
 chest_pain_type = chest_pain_map[st.selectbox("Chest Pain Type", list(chest_pain_map.keys()))]
 
 resting_bp = st.number_input("Resting Blood Pressure (mm Hg)", min_value=50, max_value=260, step=1, value=50)
-cholesterol = st.number_input("Serum Cholesterol (mg/dl)", min_value=70, max_value=600, step=1, value=70)
+cholesterol = st.number_input("Cholesterol (mg/dl)", min_value=70, max_value=600, step=1, value=70)
 
 fasting_blood_sugar = st.selectbox("Fasting Blood Sugar > 120 mg/dl", ["Yes", "No"])
 fasting_blood_sugar = 1 if fasting_blood_sugar == "Yes" else 0
