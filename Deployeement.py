@@ -38,21 +38,6 @@ exercise_angina = 1 if exercise_angina == "Yes" else 0
 
 st_depression = st.number_input("ST Depression", min_value=0.0, max_value=10.0, step=0.1, format="%.1f")
 
-slope_map = {
-    "1 - Upsloping": 1,
-    "2 - Flat": 2,
-    "3 - Downsloping": 3
-}
-slope = slope_map[st.selectbox("Slope of ST Segment", list(slope_map.keys()))]
-
-ca = st.selectbox("Number of Major Vessels (0-3)", [0, 1, 2, 3])
-
-thal_map = {
-    "1 - Normal": 1,
-    "2 - Fixed Defect": 2,
-    "3 - Reversible Defect": 3
-}
-thal = thal_map[st.selectbox("Thalassemia Type", list(thal_map.keys()))]
 
 # ---------------- Load pkl Files ---------------- #
 final = joblib.load(r'Heart Disease.pkl')
@@ -65,7 +50,7 @@ predict = st.button("Predict")
 if predict:
     result = final.predict(stand.transform([[age, sex, chest_pain_type, resting_bp,
               cholesterol, fasting_blood_sugar, resting_ecg, max_heart_rate,
-              exercise_angina, st_depression, slope, ca, thal]]))[0]
+              exercise_angina, st_depression]]))[0]
     if result == 1:
         st.error("Disease Diagnosed")
     else:
