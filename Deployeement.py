@@ -61,9 +61,7 @@ if predict:
           cholesterol, fasting_blood_sugar, resting_ecg, max_heart_rate,
           exercise_angina, st_depression, slope, ca, thal]]))[0]
 
-
-    if result == 0:
-        st.success("Disease Diagnosed")
-
+   if result == 1:            
+        st.error("Disease Diagnosed")
     else:
-        st.error("No Disease Diagnosed")
+        st.success("No Disease Diagnosed")
