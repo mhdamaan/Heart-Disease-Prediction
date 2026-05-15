@@ -22,10 +22,10 @@ resting_ecg         = st.selectbox("Resting ECG Result",options=["0 – Normal",
                                                                  "1 – ST-T Wave Abnormality",
                                                                  "2 – Left Ventricular Hypertrophy"],
                        help="Resting electrocardiographic results")
-max_heart_rate      = st.number_input("Maximum Heart Rate Achieved (bpm)",min_value=30,max_value=230,value=0,step=1)
+max_heart_rate      = st.number_input("Maximum Heart Rate Achieved (bpm)",min_value=30,max_value=230,step=1)
 exercise_angina     = st.selectbox("Exercise-Induced Angina",options=["Yes", "No"],
                        help="Angina brought on by physical exertion")
-st_depression       = st.number_input("ST Depression (induced by exercise)",min_value=0.0,max_value=10.0,value=0.0,step=0.1,format="%.1f")
+st_depression       = st.number_input("ST Depression (induced by exercise)",min_value=0.0,max_value=10.0,step=0.1,format="%.1f")
 
 
 # ---------------- Load pkl Files ---------------- #
