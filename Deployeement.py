@@ -14,7 +14,7 @@ chest_pain_type     = chest_pain_type = st.selectbox("Chest Pain Type",options={
                                                                                 "3 – Non-Anginal Pain": 3,
                                                                                 "4 – Asymptomatic": 4,}.keys(),
                       help="Type of chest pain experienced")
-resting_bp          = st.number_input("Resting Blood Pressure (mm Hg)",min_value=50,max_value=260,value=0,step=1
+resting_bp          = st.number_input("Resting Blood Pressure (mm Hg)",min_value=50,max_value=260,value=0,step=1)
 cholesterol         = st.number_input("Serum Cholesterol (mg/dl)",min_value=70,max_value=600,value=0,step=1)
 fasting_blood_sugar = st.selectbox("Fasting Blood Sugar > 120 mg/dl",options=["Yes", "No"],
                       help="Whether fasting blood sugar exceeds 120 mg/dl")
