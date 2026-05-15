@@ -30,8 +30,8 @@ st_depression       = st.number_input("ST Depression (induced by exercise)",min_
 
 # ---------------- Load pkl Files ---------------- #
 
-final = joblib.load(r'Heart Disease.pkl')
-stand = joblib.load(r'ss.pkl')
+final = joblib.load(r'ss.pkl')
+stand = joblib.load(r'Heart Disease.pkl')
 
 # ---------------- Buttons ---------------- #
     
